@@ -1,10 +1,12 @@
 export default function cleanSet(set, startString) {
-    setArray = array.from(set);
+  const result = [];
+  if (startString === '') return '';
 
-    const spliceIndex = setArray.indexOf(startString);
-    const start = 0;
-    const deleteCount = spliceIndex - 1;
+  for (const value of set) {
+    if (value.startsWith(startString)) {
+      result.push(value.slice(startString.length));
+    }
+  }
 
-    const removed = setArray.splice(start, deleteCount);
-    return setArray.join("-");
+  return result.join('-');
 }
