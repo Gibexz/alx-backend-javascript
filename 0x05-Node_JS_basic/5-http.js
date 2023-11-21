@@ -30,11 +30,16 @@ function countStudents(path) {
 
       studentsInfo += `Number of students: ${lines.length}\n`;
 
-      for (const field in students) {
+      const allfields = Object.keys(students);
+
+      allfields.forEach((field, index) => {
         if (Object.prototype.hasOwnProperty.call(students, field)) {
-          studentsInfo += `Number of students in ${field}: ${students[field].length}. List: ${students[field].join(', ')}\n`;
+          studentsInfo += `Number of students in ${field}: ${students[field].length}. List: ${students[field].join(', ')}`;
+          if (index !== allfields.length - 1) {
+            studentsInfo += '\n';
+          }
         }
-      }
+      });
 
       resolve(studentsInfo); // Resolve the promise as the operation is completed
     });
