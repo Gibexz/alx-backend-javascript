@@ -1,5 +1,5 @@
-const displayMessage = function displayMsg(arg) {
-    console.log(`${arg}`);
+const displayMessage = function displayMessage(message) {
+    process.stdout.write(`${message}\n`);
 };
 
 module.exports = displayMessage;
