@@ -14,7 +14,8 @@ app.get('/', (req, res) => {
 app.get('/students', async (req, res) => {
   try {
     const studentsData = await countStudents(databaseFile);
-    res.type('text').send(studentsData);
+    res.type('text').write(studentsData);
+    res.end();
   } catch (error) {
     res.status(500).send('Internal Server Error');
   }
