@@ -1,5 +1,5 @@
 const displayMessage = function displayMessage(message) {
-    console.log(`${message}`);
+  console.log(`${message}`);
 };
 
 module.exports = displayMessage;
