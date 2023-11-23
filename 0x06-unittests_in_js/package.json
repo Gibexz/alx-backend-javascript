@@ -5,6 +5,7 @@
         "test": "./node_modules/mocha/bin/mocha --require babel-register --exit"
     },
     "dependencies": {
-        "chai": "^4.3.10"
+        "chai": "^4.3.10",
+        "sinon": "^7.5.0"
     }
 }
