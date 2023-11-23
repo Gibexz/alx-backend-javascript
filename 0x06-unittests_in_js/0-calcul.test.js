@@ -13,5 +13,6 @@ describe('tests for calculateNumber function - All returned values are rounded',
     assert.doesNotThrow(() => calculateNumber(2.5, 3.9));
     assert.notStrictEqual(calculateNumber(1.5, 2.5), null);
     assert.ok(calculateNumber(9.6, 9.7) === 20);
+    assert.strictEqual(calculateNumber(2.499999, 3.499999), 5);
   });
 });
