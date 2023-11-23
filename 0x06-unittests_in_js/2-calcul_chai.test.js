@@ -1,21 +1,20 @@
-const chai = require('chai');
-const expect = chai.expect
+const { expect } = require('chai');
 const calculateNumber = require('./1-calcul');
 
 describe('tests for calculateNumber function - All returned values are rounded', () => {
   describe('type === "SUM"', () => {
     it('if first arg  is SUM', () => {
-      expect(calculateNumber('SUM', 2.5, 3.9)).to.be.equal(7);
-      expect(calculateNumber('SUM', -2.5, -3.9)).to.be.equal(-6);
-      expect(calculateNumber('SUM', 2, 3)).to.be.equal(5);
-      expect(calculateNumber('SUM', -2, -3)).to.be.equal(-5);
-      expect(calculateNumber('SUM', -2.5, 0)).to.be.equal(-2);
-      expect(calculateNumber('SUM', 0, 0)).to.be.equal(0);
-      expect(calculateNumber('SUM', 2.5, -0)).to.be.equal(3);
+      expect(calculateNumber('SUM', 2.5, 3.9)).to.equal(7);
+      expect(calculateNumber('SUM', -2.5, -3.9)).to.equal(-6);
+      expect(calculateNumber('SUM', 2, 3)).to.equal(5);
+      expect(calculateNumber('SUM', -2, -3)).to.equal(-5);
+      expect(calculateNumber('SUM', -2.5, 0)).to.equal(-2);
+      expect(calculateNumber('SUM', 0, 0)).to.equal(0);
+      expect(calculateNumber('SUM', 2.5, -0)).to.equal(3);
       expect(() => calculateNumber('SUM', 2.5, 3.9)).to.not.throw();
       expect(calculateNumber('SUM', 1.5, 2.5)).to.not.equal(null);
-      expect(calculateNumber('SUM', 9.6, 9.7)).to.be.equal(20);
-      expect(calculateNumber('SUM', 2.499999, 3.499999)).to.be.equal(5);
+      expect(calculateNumber('SUM', 9.6, 9.7)).to.equal(20);
+      expect(calculateNumber('SUM', 2.499999, 3.499999)).to.equal(5);
     });
   });
   describe('type === "SUBTRACT"', () => {
