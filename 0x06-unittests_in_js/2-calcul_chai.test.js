@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const calculateNumber = require('./1-calcul');
+const calculateNumber = require('./2-calcul_chai');
 
 describe('tests for calculateNumber function - All returned values are rounded', () => {
   describe('type === "SUM"', () => {
