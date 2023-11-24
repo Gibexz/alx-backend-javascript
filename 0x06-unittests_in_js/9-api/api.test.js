@@ -25,7 +25,7 @@ describe('index page', () => {
     });
   }));
 
-  it('correct status code when :id is a string for /cart/hi', () => new Promise((done) => {
+  it('correct status code when :id is a -ve number for /cart/-55', () => new Promise((done) => {
     request.get('http://localhost:7865/cart/-55', (error, response, body) => {
       expect(response.statusCode).to.equal(404);
       done();
