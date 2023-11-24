@@ -12,7 +12,7 @@ describe('API integration test', () => {
     });
   });
 
-  it('GET /cart/:id returns correct response for valid :id', (done) => {
+  it('GET /cart/:id returns the correct response for valid :id', (done) => {
     request.get(`${API_URL}/cart/47`, (_err, res, body) => {
       expect(res.statusCode).to.be.equal(200);
       expect(body).to.be.equal('Payment methods for cart 47');
